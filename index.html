@@ -304,3 +304,63 @@ footer{
 
 </body>
 </html>
+/* EQUIPO CIRCULAR */
+.team-circle{
+  position:relative;
+  width:400px;
+  height:400px;
+  margin:60px auto;
+}
+
+/* CENTRO */
+.center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+  background:#1e3a8a;
+  color:white;
+  padding:20px;
+  border-radius:50%;
+  width:150px;
+  height:150px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* MIEMBROS */
+.member{
+  position:absolute;
+  text-align:center;
+}
+
+.member img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.member span{
+  display:block;
+  margin-top:8px;
+  font-size:0.8em;
+}
+
+/* POSICIONES EN CÍRCULO */
+.m1 { top:0%; left:50%; transform:translate(-50%,0); }
+.m2 { top:25%; left:100%; transform:translate(-100%,-50%); }
+.m3 { bottom:0%; left:75%; transform:translate(-50%,0); }
+.m4 { bottom:0%; left:25%; transform:translate(-50%,0); }
+.m5 { top:25%; left:0%; transform:translate(0,-50%); }
+
+/* RESPONSIVE */
+@media(max-width:500px){
+  .team-circle{
+    transform:scale(0.8);
+  }
+}
