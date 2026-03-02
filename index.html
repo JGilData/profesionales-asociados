@@ -1,107 +1,263 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesionales Asociados</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profesionales Asociados | Consultoría Técnica</title>
+
+<meta name="description" content="Consultoría técnica en química, electricidad, validación de métodos, gestión de riesgos y formación especializada.">
+
+<style>
+
+/* RESET */
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration:none;
+  color:#1e3a8a;
+  margin-left:15px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero {
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(120deg,#0f172a,#1e3a8a);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1 {
+  font-size:3em;
+  margin-bottom:20px;
+  animation:fadeIn 1.2s ease-in;
+}
+
+.hero p {
+  max-width:600px;
+  animation:fadeIn 2s ease-in;
+}
+
+/* BOTÓN */
+.btn {
+  margin-top:25px;
+  padding:15px 30px;
+  background:#22c55e;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.btn:hover {
+  transform:scale(1.05);
+  background:#16a34a;
+}
+
+/* SECCIONES */
+.section {
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+h2 {
+  text-align:center;
+  color:#1e3a8a;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+/* TARJETAS */
+.card {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+/* IMÁGENES */
+.card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:15px;
+}
+
+/* NOSOTROS */
+.about {
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+}
+
+/* CTA */
+.cta {
+  background:#1e3a8a;
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
+
+/* FOOTER */
+footer {
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Profesionales Asociados</h1>
-    <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
+<nav>
+  <strong>Profesionales Asociados</strong>
+  <div>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
 
 <section class="hero">
-    <h2>Soluciones Técnicas Profesionales</h2>
-    <p>Ingeniería, Química, Electricidad y Formación Especializada</p>
+  <h1>Consultoría Técnica e Ingeniería</h1>
+  <p>Optimiza procesos, reduce riesgos y mejora la productividad de tu empresa</p>
+  <a class="btn" href="https://wa.me/573000000000">Solicitar asesoría</a>
 </section>
 
-<section id="servicios">
-    <h2>Servicios</h2>
+<section class="section" id="servicios">
+  <h2>Servicios</h2>
 
-    <div class="servicios-container">
+  <div class="grid">
 
-        <div class="card">
-            <img src="images/asesoría.jpg">
-            <h3>Asesoría Técnica</h3>
-            <p>Diagnóstico, manejo de sustancias químicas y normativas.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/laboratorio.jpg">
-            <h3>Laboratorio</h3>
-            <p>Validación de métodos, ISO:17025 y metrología.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/cursos.jpg">
-            <h3>Cursos</h3>
-            <p>Formación en química, cosmética, domótica y más.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/electricidad.jpg">
-            <h3>Electricidad</h3>
-            <p>Instalaciones eléctricas domésticas e industriales.</p>
-        </div>
-
+    <div class="card">
+      <img src="images/consultoria.jpg">
+      <h3>Asesoría y diagnóstico</h3>
+      <p>Evaluación técnica integral de procesos industriales.</p>
     </div>
-</section>
 
-<section id="nosotros">
-    <h2>Equipo Profesional</h2>
-
-    <div class="team-container">
-
-        <div class="team-card">
-            <img src="images/persona1.jpg">
-            <h3>Ing. Jorge Gil</h3>
-            <p>Ingeniero Químico - Especialista en Control y Automatización Industrial</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/persona2.jpg">
-            <h3>Ing. Hanya Salas</h3>
-            <p>Magister en Educación</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/persona3.jpg">
-            <h3>Qca. Laura López</h3>
-            <p>Directora Técnica- Experta en Válidación de Métodos y Metrología</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/persona4.jpg">
-            <h3>Ing. Sebastián Torres</h3>
-            <p>Ingeniero Electricista - Automatización industrial</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/persona5.jpg">
-            <h3>Admon. Daniela Rojas</h3>
-            <p>Especialista en SEguridad E Higiene Ocupacional</p>
-        </div>
-
+    <div class="card">
+      <img src="images/quimica.jpg">
+      <h3>Validación de métodos</h3>
+      <p>Control de calidad bajo estándares internacionales.</p>
     </div>
+
+    <div class="card">
+      <img src="images/cosmetica.jpg">
+      <h3>Formulación dermocosmética</h3>
+      <p>Desarrollo de productos cosméticos y naturales.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/seguridad.jpg">
+      <h3>Gestión de sustancias</h3>
+      <p>Manejo seguro, EPIs y cumplimiento normativo.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/educacion.jpg">
+      <h3>Capacitación técnica</h3>
+      <p>Cursos en química, ISO, metrología y más.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/electricidad.jpg">
+      <h3>Electricidad industrial</h3>
+      <p>Instalaciones y mantenimiento profesional.</p>
+    </div>
+
+  </div>
 </section>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>WhatsApp: 301 359 1269</p>
-    <p>Email: contacto@profesionalesasociados.com</p>
+<section class="section" id="nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p class="about">
+    Somos un equipo multidisciplinario especializado en soluciones técnicas,
+    químicas e industriales, enfocados en optimizar procesos, garantizar seguridad
+    y mejorar la productividad empresarial.
+  </p>
+</section>
+
+<section class="cta" id="contacto">
+  <h2>¿Listo para mejorar tu empresa?</h2>
+  <p>Contáctanos ahora y recibe asesoría personalizada</p>
+  <a class="btn" href="https://wa.me/573000000000">Hablar por WhatsApp</a>
 </section>
 
 <footer>
-    <p>© 2026 Profesionales Asociados</p>
+  © 2026 Profesionales Asociados
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+/* Animación al hacer scroll */
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+
+    if(top < trigger){
+      card.classList.add('visible');
+    }
+  });
+});
+
+</script>
+
 </body>
 </html>
