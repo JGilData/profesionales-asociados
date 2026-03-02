@@ -3,158 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profesionales Asociados | Consultoría Técnica</title>
 
-<meta name="description" content="Consultoría técnica en química, electricidad, validación de métodos, gestión de riesgos y formación especializada.">
+<title>Profesionales Asociados | Ingeniería & Consultoría</title>
+<meta name="description" content="Consultoría en ingeniería, química, electricidad y formación técnica especializada.">
 
 <style>
 
 /* RESET */
-body {
+body{
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#f8fafc;
-  color:#1f2937;
-  scroll-behavior:smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:#ffffff;
+  color:#1d1d1f;
 }
 
 /* NAV */
-nav {
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  padding:20px 40px;
-  background:white;
-  position:sticky;
-  top:0;
+  padding:20px 60px;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
   z-index:1000;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-nav a {
+nav a{
   text-decoration:none;
-  color:#1e3a8a;
-  margin-left:15px;
-  font-weight:600;
+  color:#1d1d1f;
+  margin-left:20px;
+  font-weight:500;
 }
 
-/* HERO */
-.hero {
-  height:90vh;
+/* HERO (ESTILO APPLE) */
+.hero{
+  height:100vh;
+  background: url('images/banner.jpg') center/cover no-repeat;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  background:linear-gradient(120deg,#0f172a,#1e3a8a);
-  color:white;
   text-align:center;
-  padding:20px;
+  color:white;
+  position:relative;
 }
 
-.hero h1 {
-  font-size:3em;
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  top:0;
+  left:0;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:3.5em;
   margin-bottom:20px;
-  animation:fadeIn 1.2s ease-in;
 }
 
-.hero p {
+.hero p{
+  font-size:1.2em;
   max-width:600px;
-  animation:fadeIn 2s ease-in;
 }
 
 /* BOTÓN */
-.btn {
+.btn{
   margin-top:25px;
-  padding:15px 30px;
-  background:#22c55e;
+  padding:14px 30px;
+  background:#0071e3;
   color:white;
-  border-radius:6px;
+  border-radius:30px;
   text-decoration:none;
   transition:0.3s;
-  font-weight:bold;
 }
 
-.btn:hover {
-  transform:scale(1.05);
-  background:#16a34a;
+.btn:hover{
+  background:#005bb5;
 }
 
 /* SECCIONES */
-.section {
-  padding:80px 20px;
+.section{
+  padding:100px 40px;
   max-width:1200px;
   margin:auto;
 }
 
-h2 {
+h2{
   text-align:center;
-  color:#1e3a8a;
+  font-size:2.2em;
+  margin-bottom:40px;
 }
 
-/* GRID */
-.grid {
+/* SERVICIOS */
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-  margin-top:40px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
-/* TARJETAS */
-.card {
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-  transition:0.4s;
-  opacity:0;
-  transform:translateY(40px);
+.card{
+  border-radius:20px;
+  overflow:hidden;
+  background:#f5f5f7;
+  transition:0.3s;
 }
 
-.card.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-
-.card:hover {
-  transform:translateY(-5px);
-}
-
-/* IMÁGENES */
-.card img {
+.card img{
   width:100%;
-  height:180px;
+  height:200px;
   object-fit:cover;
-  border-radius:8px;
-  margin-bottom:15px;
+}
+
+.card h3{
+  padding:15px;
+}
+
+.card p{
+  padding:0 15px 20px;
+}
+
+.card:hover{
+  transform:scale(1.03);
 }
 
 /* NOSOTROS */
-.about {
+.about{
   text-align:center;
   max-width:700px;
   margin:auto;
+  font-size:1.1em;
+}
+
+/* EQUIPO */
+.team{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.member{
+  text-align:center;
+}
+
+.member img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:15px;
+}
+
+.member h4{
+  margin:5px 0;
+}
+
+.member p{
+  color:#6e6e73;
+  font-size:0.9em;
 }
 
 /* CTA */
-.cta {
-  background:#1e3a8a;
-  color:white;
+.cta{
   text-align:center;
-  padding:70px 20px;
+  background:#000;
+  color:white;
+  padding:80px 20px;
 }
 
 /* FOOTER */
-footer {
-  background:#0f172a;
-  color:white;
+footer{
   text-align:center;
   padding:20px;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
+  color:#6e6e73;
 }
 
 </style>
@@ -167,54 +197,21 @@ footer {
   <div>
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
-    <a class="btn" onclick="toggleEquipo()">Ver equipo de trabajo</a>
-    <section class="section" id="equipo" style="display:none;">
-  <h2>Nuestro Equipo</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="images/persona1.jpg">
-      <h3>Ingeniero Químico</h3>
-      <p>Especialista en validación de métodos analíticos.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/persona2.jpg">
-      <h3>Especialista Dermocosmético</h3>
-      <p>Formulación y desarrollo de productos cosméticos.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/persona3.jpg">
-      <h3>Ingeniero de Seguridad</h3>
-      <p>Gestión de sustancias peligrosas y normativas.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/persona4.jpg">
-      <h3>Ingeniero Electricista</h3>
-      <p>Automatización y sistemas industriales.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/persona5.jpg">
-      <h3>Especialista en Metrología</h3>
-      <p>ISO 17025 y control de calidad.</p>
-    </div>
-
-  </div>
-</section>
+    <a href="#equipo">Equipo</a>
     <a href="#contacto">Contacto</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Consultoría Técnica e Ingeniería</h1>
-  <p>Optimiza procesos, reduce riesgos y mejora la productividad de tu empresa</p>
-  <a class="btn" href="https://wa.me/573013591269">Solicitar asesoría</a>
+  <div class="hero-content">
+    <h1>Ingeniería & Consultoría Técnica</h1>
+    <p>Soluciones avanzadas en química, electricidad y formación especializada</p>
+    <a class="btn" href="https://wa.me/573000000000">Contactar</a>
+  </div>
 </section>
 
+<!-- SERVICIOS -->
 <section class="section" id="servicios">
   <h2>Servicios</h2>
 
@@ -222,92 +219,88 @@ footer {
 
     <div class="card">
       <img src="images/consultoria.jpg">
-      <h3>Asesoría y diagnóstico</h3>
-      <p>Evaluación técnica integral de procesos industriales.</p>
+      <h3>Consultoría Técnica</h3>
+      <p>Diagnóstico y optimización de procesos industriales.</p>
     </div>
 
     <div class="card">
       <img src="images/quimica.jpg">
-      <h3>Validación de métodos</h3>
+      <h3>Validación de Métodos</h3>
       <p>Control de calidad bajo estándares internacionales.</p>
     </div>
 
     <div class="card">
       <img src="images/cosmetica.jpg">
-      <h3>Formulación dermocosmética</h3>
-      <p>Desarrollo de productos cosméticos y naturales.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/seguridad.jpg">
-      <h3>Gestión de sustancias</h3>
-      <p>Manejo seguro, EPIs y cumplimiento normativo.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/educacion.jpg">
-      <h3>Capacitación técnica</h3>
-      <p>Cursos en química, ISO, metrología y más.</p>
+      <h3>Dermocosmética</h3>
+      <p>Formulación y desarrollo de productos.</p>
     </div>
 
     <div class="card">
       <img src="images/electricidad.jpg">
-      <h3>Electricidad industrial</h3>
-      <p>Instalaciones y mantenimiento profesional.</p>
+      <h3>Electricidad Industrial</h3>
+      <p>Instalaciones y automatización.</p>
     </div>
 
   </div>
 </section>
 
+<!-- NOSOTROS -->
 <section class="section" id="nosotros">
-  <h2>Sobre Nosotros</h2>
+  <h2>Nosotros</h2>
   <p class="about">
-    Somos un equipo multidisciplinario especializado en soluciones técnicas,
-    químicas e industriales, enfocados en optimizar procesos, garantizar seguridad
-    y mejorar la productividad empresarial.
+    Somos un equipo de profesionales especializados en ingeniería, química y tecnología,
+    enfocados en ofrecer soluciones eficientes, seguras y de alto impacto para empresas.
   </p>
 </section>
 
+<!-- EQUIPO -->
+<section class="section" id="equipo">
+  <h2>Nuestro Equipo</h2>
+
+  <div class="team">
+
+    <div class="member">
+      <img src="images/persona1.jpg">
+      <h4>Ingeniero Químico</h4>
+      <p>Validación de métodos</p>
+    </div>
+
+    <div class="member">
+      <img src="images/persona2.jpg">
+      <h4>Especialista Cosmético</h4>
+      <p>Formulación dermocosmética</p>
+    </div>
+
+    <div class="member">
+      <img src="images/persona3.jpg">
+      <h4>Seguridad Industrial</h4>
+      <p>Gestión de riesgos químicos</p>
+    </div>
+
+    <div class="member">
+      <img src="images/persona4.jpg">
+      <h4>Ingeniero Electricista</h4>
+      <p>Automatización</p>
+    </div>
+
+    <div class="member">
+      <img src="images/persona5.jpg">
+      <h4>Metrología</h4>
+      <p>ISO 17025</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta" id="contacto">
-  <h2>¿Listo para mejorar tu empresa?</h2>
-  <p>Contáctanos ahora y recibe asesoría personalizada</p>
-  <a class="btn" href="https://wa.me/573013591269">Hablar por WhatsApp</a>
+  <h2>¿Listo para trabajar con nosotros?</h2>
+  <a class="btn" href="https://wa.me/573013591269">Escríbenos</a>
 </section>
 
 <footer>
   © 2026 Profesionales Asociados
 </footer>
 
-<script>
-
-/* Animación al hacer scroll */
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-  const trigger = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-
-    if(top < trigger){
-      card.classList.add('visible');
-    }
-  });
-});
-
-</script>
-
 </body>
 </html>
-<script>
-function toggleEquipo() {
-  const section = document.getElementById("equipo");
-
-  if(section.style.display === "none"){
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: "smooth" });
-  } else {
-    section.style.display = "none";
-  }
-}
-</script>
