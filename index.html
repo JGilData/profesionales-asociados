@@ -143,55 +143,48 @@ footer {
 <section class="hero">
   <h1>Consultoría Técnica e Ingeniería</h1>
   <p>Soluciones en química, industria y electricidad para optimizar tu negocio</p>
-  <a class="btn" href="https://wa.me/573000000000">Contáctanos</a>
+  <a class="btn" href="https://wa.me/573013591269">Contáctanos</a>
 </section>
 
 <section class="section" id="servicios">
   <h2>Servicios</h2>
   <div class="grid">
-    <div class="card">Asesoría y diagnóstico técnico</div>
-    <div class="card">Validación de métodos analíticos</div>
-    <div class="card">Formulación cosmética</div>
-    <div class="card">Gestión de sustancias químicas</div>
-    <div class="card">Gestión de residuos peligrosos</div>
-    <div class="card">Educación técnica</div>
-    <div class="card">Electricidad industrial</div>
+
+    <div class="card">
+      <img src="images/consultoria.jpg" alt="Consultoría técnica">
+      <h3>Asesoría y diagnóstico</h3>
+      <p>Evaluación técnica integral de procesos.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/quimica.jpg" alt="Laboratorio químico">
+      <h3>Validación de métodos</h3>
+      <p>Control de calidad bajo estándares.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/cosmetica.jpg" alt="Cosmética">
+      <h3>Formulación dermocosmética</h3>
+      <p>Desarrollo de productos especializados.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/seguridad.jpg" alt="Seguridad química">
+      <h3>Gestión de sustancias</h3>
+      <p>Manejo seguro y normativo.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/educacion.jpg" alt="Educación técnica">
+      <h3>Capacitación técnica</h3>
+      <p>Cursos especializados.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/electricidad.jpg" alt="Electricidad">
+      <h3>Electricidad industrial</h3>
+      <p>Instalaciones y mantenimiento.</p>
+    </div>
+
   </div>
 </section>
-
-<section class="section" id="nosotros">
-  <h2>Sobre Nosotros</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Somos un equipo especializado en soluciones técnicas integrales,
-    enfocados en mejorar procesos, seguridad y productividad empresarial.
-  </p>
-</section>
-
-<section class="cta" id="contacto">
-  <h2>¿Listo para mejorar tu empresa?</h2>
-  <a class="btn" href="https://wa.me/573000000000">Hablar por WhatsApp</a>
-</section>
-
-<footer>
-  © 2026 Profesionales Asociados
-</footer>
-
-<script>
-// Animación al hacer scroll
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-  const trigger = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-
-    if(top < trigger){
-      card.classList.add('visible');
-    }
-  });
-});
-</script>
-
-</body>
-</html>
