@@ -167,6 +167,44 @@ footer {
   <div>
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
+    <a class="btn" onclick="toggleEquipo()">Ver equipo de trabajo</a>
+    <section class="section" id="equipo" style="display:none;">
+  <h2>Nuestro Equipo</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/persona1.jpg">
+      <h3>Ingeniero Químico</h3>
+      <p>Especialista en validación de métodos analíticos.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/persona2.jpg">
+      <h3>Especialista Dermocosmético</h3>
+      <p>Formulación y desarrollo de productos cosméticos.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/persona3.jpg">
+      <h3>Ingeniero de Seguridad</h3>
+      <p>Gestión de sustancias peligrosas y normativas.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/persona4.jpg">
+      <h3>Ingeniero Electricista</h3>
+      <p>Automatización y sistemas industriales.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/persona5.jpg">
+      <h3>Especialista en Metrología</h3>
+      <p>ISO 17025 y control de calidad.</p>
+    </div>
+
+  </div>
+</section>
     <a href="#contacto">Contacto</a>
   </div>
 </nav>
@@ -261,3 +299,15 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
+<script>
+function toggleEquipo() {
+  const section = document.getElementById("equipo");
+
+  if(section.style.display === "none"){
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    section.style.display = "none";
+  }
+}
+</script>
